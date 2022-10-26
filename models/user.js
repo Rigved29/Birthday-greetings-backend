@@ -6,7 +6,7 @@ const userSchema = mongoose.Schema({
     required: true,
   },
 
-  birthday_person_name: {
+  birthdayPersonName: {
     type: String,
     required: true,
   },
