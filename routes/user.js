@@ -18,15 +18,19 @@ router.route("/userlink").post(async (req, res) => {
 });
 
 router.route("/userInfo/:id").get(async (req, res) => {
+  let res_User;
   try {
     console.log("REQ_Params", req.params);
-    const res_User = await userModel.findById({
+    res_User = await userModel.findById({
       _id: req.params.id,
     });
-    if (!res_User) return res.status(404).send("not found");
+
     res.status(200).json(res_User);
   } catch (err) {
     console.log(err);
+  } finally {
+    console.log("RES_USER", res_User);
+    if (!res_User) return res.status(404).send("not found");
   }
 });
 
