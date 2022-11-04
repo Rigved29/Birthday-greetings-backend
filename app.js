@@ -43,7 +43,7 @@ app.get("/", (req, res) => {
 
 app.use("/", userRoutes);
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
   console.log(`birthday app running on port ${port}`);
