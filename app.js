@@ -8,11 +8,11 @@ app.use(express.json());
 
 // For resolving cors problem
 var allowCrossDomain = function (req, res, next) {
-  res.set("Access-Control-Allow-Origin", "http://localhost:3000"); //https://birthday-wish-alpha.vercel.app
-  // res.set(
-  //   "Access-Control-Allow-Origin",
-  //   `https://birthday-wish-alpha.vercel.app`
-  // );
+  // res.set("Access-Control-Allow-Origin", "http://localhost:3000"); https://birthday-wish-alpha.vercel.app
+  res.set(
+    "Access-Control-Allow-Origin",
+    `https://birthday-wish-alpha.vercel.app`
+  );
   res.set("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.set(
     "Access-Control-Allow-Headers",
